@@ -9,6 +9,6 @@ COPY radicale.conf /radicale.conf
 EXPOSE 5232/tcp
 VOLUME ["/data"]
 
-CMD radicale -f -S -C /radicale.conf
+CMD radicale -S -C /radicale.conf
 
 HEALTHCHECK CMD curl -f -L http://localhost:5232/ || exit 1
